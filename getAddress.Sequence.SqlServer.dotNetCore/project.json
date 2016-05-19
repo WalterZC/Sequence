@@ -2,7 +2,7 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "getAddress.Sequence.dotNetCore": "1.0.0-*",
+    "getAddress.Sequence": "1.0.0-*",
     "NETStandard.Library": "1.5.0-rc2-24027"
   },
 
