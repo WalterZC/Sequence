@@ -1,11 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace getAddress.Sequence.EntityFramework
+namespace getAddress.Sequence.EntityFramework.SqlServer
 {
 
     [Table("DbServerSequence")]
-    public  class DbServerSequence : ISequence
+    public  class DbServerSequence : ISequence,IRowVersion
     {
 
         public DbServerSequence()
@@ -31,7 +32,7 @@ namespace getAddress.Sequence.EntityFramework
         public bool Cycle { get;  set; }
         public long CurrentValue { get; set; }
 
-
+        [ConcurrencyCheck]
         public byte[] RowVersion { get; set; }
         public DateTime DateCreated { get; set; }
     }

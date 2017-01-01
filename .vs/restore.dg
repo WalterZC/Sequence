@@ -1,6 +1,5 @@
-#:D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.dotNetCore\getAddress.Sequence.EntityFramework.dotNetCore.xproj
-D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.dotNetCore\getAddress.Sequence.EntityFramework.dotNetCore.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj
 #:D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj
-D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj
-D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.dotNetCore\getAddress.Sequence.EntityFramework.dotNetCore.xproj
-D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.dotNetCore\getAddress.Sequence.EntityFramework.dotNetCore.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj
+D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.MySql\getAddress.Sequence.EntityFramework.MySql.xproj
+D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.SqlServer\getAddress.Sequence.EntityFramework.SqlServer.xproj
+D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.MySql\getAddress.Sequence.EntityFramework.MySql.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj
+D:\Workshop\GitHub\Sequence\getAddress.Sequence.EntityFramework.SqlServer\getAddress.Sequence.EntityFramework.SqlServer.xproj|D:\Workshop\GitHub\Sequence\getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj

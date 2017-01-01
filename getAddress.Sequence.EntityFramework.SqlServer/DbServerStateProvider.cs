@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
-
+using System.Text;
 using System.Threading.Tasks;
 
-namespace getAddress.Sequence.EntityFramework
+namespace getAddress.Sequence.EntityFramework.SqlServer
 {
     public class DbServerStateProvider:IStateProvider
     {
@@ -26,7 +26,6 @@ namespace getAddress.Sequence.EntityFramework
             sqlServerSequence.Key = Guid.NewGuid().ToString();
             sqlServerSequence.DateCreated = DateTime.UtcNow;
 
-
             DbSet.Add(sqlServerSequence);
 
            await SaveChangesAsync();
@@ -37,8 +36,6 @@ namespace getAddress.Sequence.EntityFramework
         public async Task<ISequence> GetAsync(SequenceKey sequenceKey)
         {
             var sequence = await DbSet.FirstOrDefaultAsync(s => s.Key == sequenceKey.Value);
-
-
             return sequence;
         }
 
@@ -47,21 +44,28 @@ namespace getAddress.Sequence.EntityFramework
         {
             try
             {
+                DbContext.ChangeTracker.DetectChanges();
+                foreach (var entity in DbContext.ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added))
+                {
+                    var saveEntity = entity.Entity as IRowVersion;
+                    saveEntity.RowVersion = Encoding.UTF8.GetBytes(Guid.NewGuid().ToString());
+                }
                 return await Task.FromResult(DbContext.SaveChanges());
             }
-            catch (DbUpdateConcurrencyException)
+            catch(DbUpdateException)
             {
                 if (handleConcurrencyExceptions)
                 {
                     return 0;
                 }
                 throw;
-            }
+            }         
 
         }
 
         public async Task<bool> UpdateAsync(SequenceKey sequenceKey, ISequence sequence)
         {
+             
             var updateResult = await SaveChangesAsync();
 
             if (updateResult != 1)

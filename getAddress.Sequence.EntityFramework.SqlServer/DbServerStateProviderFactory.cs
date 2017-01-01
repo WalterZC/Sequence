@@ -2,7 +2,7 @@
 
 using Microsoft.EntityFrameworkCore;
 
-namespace getAddress.Sequence.EntityFramework
+namespace getAddress.Sequence.EntityFramework.SqlServer
 {
     public class DbServerStateProviderFactory
     {

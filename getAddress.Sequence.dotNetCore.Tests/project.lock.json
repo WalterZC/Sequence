@@ -870,12 +870,11 @@
           "System.Runtime"
         ]
       },
-      "getAddress.Sequence.EntityFramework.dotNetCore/1.0.0.1": {
+      "getAddress.Sequence.EntityFramework.MySql/1.0.0.1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.1.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
           "Microsoft.Extensions.Configuration": "1.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
@@ -892,10 +891,37 @@
           "System.Runtime"
         ],
         "compile": {
-          "net451/getAddress.Sequence.EntityFramework.dotNetCore.dll": {}
+          "net451/getAddress.Sequence.EntityFramework.MySql.dll": {}
         },
         "runtime": {
-          "net451/getAddress.Sequence.EntityFramework.dotNetCore.dll": {}
+          "net451/getAddress.Sequence.EntityFramework.MySql.dll": {}
+        }
+      },
+      "getAddress.Sequence.EntityFramework.SqlServer/1.0.0.1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
+          "Microsoft.Extensions.Configuration": "1.1.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "1.1.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+          "Microsoft.Extensions.Configuration.Json": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "getAddress.Sequence.dotNetCore": "1.0.0.1"
+        },
+        "frameworkAssemblies": [
+          "System.Collections",
+          "System.Diagnostics.Contracts",
+          "System.Linq.Expressions",
+          "System.Reflection",
+          "System.Runtime"
+        ],
+        "compile": {
+          "net451/getAddress.Sequence.EntityFramework.SqlServer.dll": {}
+        },
+        "runtime": {
+          "net451/getAddress.Sequence.EntityFramework.SqlServer.dll": {}
         }
       }
     }
@@ -3639,16 +3665,22 @@
       "type": "project",
       "path": "../getAddress.Sequence.dotNetCore/project.json"
     },
-    "getAddress.Sequence.EntityFramework.dotNetCore/1.0.0.1": {
+    "getAddress.Sequence.EntityFramework.MySql/1.0.0.1": {
       "type": "project",
-      "path": "../getAddress.Sequence.EntityFramework.dotNetCore/project.json",
-      "msbuildProject": "../getAddress.Sequence.EntityFramework.dotNetCore/getAddress.Sequence.EntityFramework.dotNetCore.xproj"
+      "path": "../getAddress.Sequence.EntityFramework.MySql/project.json",
+      "msbuildProject": "../getAddress.Sequence.EntityFramework.MySql/getAddress.Sequence.EntityFramework.MySql.xproj"
+    },
+    "getAddress.Sequence.EntityFramework.SqlServer/1.0.0.1": {
+      "type": "project",
+      "path": "../getAddress.Sequence.EntityFramework.SqlServer/project.json",
+      "msbuildProject": "../getAddress.Sequence.EntityFramework.SqlServer/getAddress.Sequence.EntityFramework.SqlServer.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "NETStandard.Library >= 1.6.1",
-      "getAddress.Sequence.EntityFramework.dotNetCore >= 1.0.0.1",
+      "getAddress.Sequence.EntityFramework.MySql >= 1.0.0.1",
+      "getAddress.Sequence.EntityFramework.SqlServer >= 1.0.0.1",
       "getAddress.Sequence.dotNetCore >= 1.0.0.1",
       "xunit >= 2.1.0",
       "xunit.runner.visualstudio >= 2.1.0"

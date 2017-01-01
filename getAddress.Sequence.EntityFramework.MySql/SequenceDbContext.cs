@@ -1,23 +1,23 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
- 
+using System;
+using System.Linq;
 
-
-namespace getAddress.Sequence.EntityFramework
+namespace getAddress.Sequence.EntityFramework.MySql
 {
    
     public class SequenceDbContext : DbContext
     {
-        private readonly bool _configured;
+ 
 
         public SequenceDbContext()
         {
-            _configured = false;
+
         }
         public SequenceDbContext(DbContextOptions opt)
             : base(opt)
         {
-            _configured = true;
+
         }
 
         public DbSet<DbServerSequence> Sequences { get; set; }
@@ -30,8 +30,10 @@ namespace getAddress.Sequence.EntityFramework
             builder.Entity<DbServerSequence>(e =>
             {
                 e.HasKey(x => x.Key);
-                e.Property(x => x.RowVersion).IsRowVersion();
-            });           
+                e.Property(x => x.RowVersion).IsRowVersion().IsConcurrencyToken();
+            });
         }
+
+        
     }
 }
