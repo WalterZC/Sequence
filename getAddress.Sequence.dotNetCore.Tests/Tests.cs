@@ -13,12 +13,12 @@ namespace getAddress.Sequence.Tests
         private IStateProvider GetStateProvider()
         {
             var optionsBuilder = new DbContextOptionsBuilder();
-            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=Anycmd;;Integrated Security=True;");
-            optionsBuilder.UseMySql(@"Server = localhost; Port = 3306; Database = anycmd; Uid = root; Password = itcloud@123");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=Anycmd;;Integrated Security=True;");
+            //optionsBuilder.UseMySql(@"Server = localhost; Port = 3306; Database = anycmd; Uid = root; Password = itcloud@123");
             //return MongoStateProviderFactory.Get(@"mongodb://localhost/SequenceTest");
             var dbOptions = optionsBuilder.Options;
-            //return SqlServer.DbServerStateProviderFactory.Get(dbOptions);
-            return getAddress.Sequence.EntityFramework.MySql.DbServerStateProviderFactory.Get(dbOptions);
+            return SqlServer.DbServerStateProviderFactory.Get(dbOptions);
+            //return getAddress.Sequence.EntityFramework.MySql.DbServerStateProviderFactory.Get(dbOptions);
             //return AzureStateProviderFactory.Get(""/*Your Azure connection string*/, "SequenceTest");
             //return new InMemoryStateProvider();
         }

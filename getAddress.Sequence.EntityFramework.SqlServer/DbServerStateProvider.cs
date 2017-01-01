@@ -43,13 +43,7 @@ namespace getAddress.Sequence.EntityFramework.SqlServer
         private async Task<int> SaveChangesAsync(bool handleConcurrencyExceptions = true)
         {
             try
-            {
-                DbContext.ChangeTracker.DetectChanges();
-                foreach (var entity in DbContext.ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added))
-                {
-                    var saveEntity = entity.Entity as IRowVersion;
-                    saveEntity.RowVersion = Encoding.UTF8.GetBytes(Guid.NewGuid().ToString());
-                }
+            {             
                 return await Task.FromResult(DbContext.SaveChanges());
             }
             catch(DbUpdateException)

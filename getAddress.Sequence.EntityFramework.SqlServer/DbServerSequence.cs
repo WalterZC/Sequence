@@ -6,7 +6,7 @@ namespace getAddress.Sequence.EntityFramework.SqlServer
 {
 
     [Table("DbServerSequence")]
-    public  class DbServerSequence : ISequence,IRowVersion
+    public  class DbServerSequence : ISequence
     {
 
         public DbServerSequence()
