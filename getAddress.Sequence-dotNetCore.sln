@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "getAddress.Sequence", "getAddress.Sequence.dotNetCore\getAddress.Sequence.xproj", "{0BE7E14B-3BB5-46EC-A7B1-20641FA25424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getAddress.Sequence.dotNetCore", "getAddress.Sequence.dotNetCore\getAddress.Sequence.dotNetCore.csproj", "{0BE7E14B-3BB5-46EC-A7B1-20641FA25424}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "getAddress.Sequence.dotNetCore.Tests", "getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.xproj", "{C82EA650-346E-49B3-86B8-C1E62960040E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getAddress.Sequence.dotNetCore.Tests", "getAddress.Sequence.dotNetCore.Tests\getAddress.Sequence.dotNetCore.Tests.csproj", "{C82EA650-346E-49B3-86B8-C1E62960040E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "getAddress.Sequence.EntityFramework.SqlServer", "getAddress.Sequence.EntityFramework.SqlServer\getAddress.Sequence.EntityFramework.SqlServer.xproj", "{5CB98830-F62E-4DFA-802C-37A90C50BAEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getAddress.Sequence.EntityFramework.SqlServer", "getAddress.Sequence.EntityFramework.SqlServer\getAddress.Sequence.EntityFramework.SqlServer.csproj", "{5CB98830-F62E-4DFA-802C-37A90C50BAEC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "getAddress.Sequence.EntityFramework.MySql", "getAddress.Sequence.EntityFramework.MySql\getAddress.Sequence.EntityFramework.MySql.xproj", "{452559FD-0F75-4C2D-88C3-0129D878EE2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getAddress.Sequence.EntityFramework.MySql", "getAddress.Sequence.EntityFramework.MySql\getAddress.Sequence.EntityFramework.MySql.csproj", "{452559FD-0F75-4C2D-88C3-0129D878EE2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
